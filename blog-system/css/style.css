@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mahajani&display=swap');
+
+body{
+    background-color: rgb(34, 34, 46);
+    font-family: 'Noto Sans Mahajani', sans-serif;
+}
+
+.welcome_container{
+    position: fixed;
+    padding: 50pt;
+    left: 10%;
+    top: 10%;
+}
+.welcome-text{
+    color: white;
+ 
+}
+
+.catalog-controls{
+    position: absolute;
+    right: 80pt;
+    color: #fff;
+    background-color: #4b4a5d;
+    top: 10%;
+    font-size: 25px;
+    width: 40%;
+}
+.blog-catalog{
+    position: absolute;
+    
+    overflow-y: scroll;
+    width: 40%;
+    height: 50%;
+    right: 80pt;
+    top: 20%;
+    color: #fff;
+
+
+}
+
+
+.blog-container{
+    text-align: left;
+    padding: 10px;
+
+    border-style: solid;
+    border-color: rgba(200, 200, 200, 0.089);
+    border-width: 0.5px 0.5px 0px 0px;
+    border-radius: 15px;
+    margin-bottom: 100pt;
+ 
+ 
+}
+
+.blog-data{
+    color: #39374F; 
+    margin-top: 20pt;
+}
+.blog-data-border{
+    border-style: solid;
+    border-color: rgba(200, 200, 200, 0.089);
+    border-width: 0.5pt;
+    padding: 4px;
+    border-radius: 5px;
+}
