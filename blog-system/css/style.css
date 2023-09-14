@@ -20,15 +20,24 @@ body{
     position: absolute;
     right: 80pt;
     color: #fff;
-    background-color: #4b4a5d;
+    background-color: rgba(39, 39, 53, 0.67);
+    padding: 5pt;
     top: 10%;
     font-size: 25px;
     width: 40%;
+    text-align: center;
+}
+.control-arrow{
+    background-color: #39374F;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10pt;
 }
 .blog-catalog{
     position: absolute;
     
     overflow-y: scroll;
+    
     width: 40%;
     height: 50%;
     right: 80pt;
