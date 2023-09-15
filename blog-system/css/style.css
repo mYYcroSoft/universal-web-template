@@ -18,12 +18,72 @@ body{
 .welcome_container{
     position: fixed;
     padding: 50pt;
+    width: 40%;
     left: 10%;
     top: 10%;
 }
 .welcome-text{
     color: white;
  
+}
+
+.socialIcon{
+  position: relative;
+  top: 50pt;
+  color: #ffffff4e;
+  font-size: 30pt;
+  margin-left: 0pt;
+  transition: 0.3s;
+  margin-right: 20pt;
+}
+
+.socialIcon:hover{
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+.languages{
+  position: absolute;
+ 
+  top: 120%;
+  height: 150%;
+  width: 100%;
+}
+
+.langugage_box{
+  border-radius: 5px;
+  margin-top: 50pt;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  opacity: 0.7;
+  background-color: #34333e;
+  text-align: center;
+  padding: 50px 0;
+ 
+  color: #efefef;
+   
+  transition: 0.3s;
+
+}
+
+.langugage_box:hover{
+  transition: 0.3s;
+  opacity: 0.09;
+  color: #0bedbc;
+}
+
+.mainLang{
+  background-color: #0bedbc4f;
+}
+.language_name{
+
+
+   
+  font-weight: 500;
+  font-size: 1vw;  
 }
 
 .catalog-controls{
@@ -149,17 +209,3 @@ body{
   padding: 15pt;
 }
 
-.socialIcon{
-  position: relative;
-  top: 50pt;
-  color: #ffffff4e;
-  font-size: 30pt;
-  margin-left: 0pt;
-  transition: 0.3s;
-  margin-right: 20pt;
-}
-
-.socialIcon:hover{
-  transition: 0.3s;
-  color: #ffffff;
-}
