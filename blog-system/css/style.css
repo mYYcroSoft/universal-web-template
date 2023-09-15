@@ -64,7 +64,7 @@ body{
   padding: 50px 0;
  
   color: #efefef;
-   
+
   transition: 0.3s;
 
 }
@@ -73,6 +73,7 @@ body{
   transition: 0.3s;
   opacity: 0.09;
   color: #0bedbc;
+  transform: rotateZ(90deg);
 }
 
 .mainLang{
