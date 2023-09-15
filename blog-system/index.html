@@ -7,8 +7,19 @@
 
     <title>Blog</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/pageLoad.css">
+    <link rel="stylesheet" href="./css/cursor.css">
+    <link rel="stylesheet" href="./css/zoom.css">
+    <link rel="stylesheet" href="./css/typewrite.css">
 </head>
 <body>
+<div class="pageLoad" id="pageLoad">
+    <div class="loader"></div>
+</div>
+     
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    
 <div class="navigrationBar" id="navBar" >
     <i class="fa-solid fa-bars navigrationBarIcon" id="navIcon"></i>
     <div class="nav-container" id="navCont" style="display: block;">
@@ -19,8 +30,15 @@
     <div class="welcome_container">
         <h1 class="welcome-text text-6xl font-bold">Hello,</h1>
         <span class="text-6xl font-bold text-white">I'm</span>
-        <span class=" text-6xl font-bold text-teal-500 ml-10">Web developer</span>
+        <span class=" text-6xl font-bold text-teal-500 ml-10" id="feature-text" ></span>
+        <span class="input-cursor"></span>
          
+        <div class="socials">
+            <i class="fa-brands fa-github socialIcon"></i>
+            <i class="fa-brands fa-instagram socialIcon"></i>
+            <i class="fa-brands fa-discord socialIcon"></i>
+            <i class="fa-brands fa-linkedin socialIcon"></i>
+        </div>
     </div>
 
     
@@ -32,47 +50,61 @@
     <div class="blog-catalog" id="blogCatalog">
 
         <div id="blog" class="blog-container">
-            <h2 class="blog-title text-3xl font-bold">Discord update 1</h2>
+            <h2 class="blog-title text-3xl font-light">Nová aktulizace</h2>
             <p class="blog-text text-l">Lorem ipsum dolo ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo </p>
           
             <div class="blog-data">
                 <span class="blog-date text-xl blog-data-border">2023/05/16</span>
                 <span class="blog-category text-xl blog-data-border">IT</span>
                 <span class="blog-role text-xl blog-data-border">Updates</span>
-                <a href="#" class="blog-link text-xl ml-20">Read more</a>
+                <a href="#" class="blog-link text-xl ml-20 text-white">Read more</a>
             </div>
         </div>
         <div id="blog" class="blog-container">
-            <h2 class="blog-title text-3xl font-bold">Discord update 2</h2>
+            <h2 class="blog-title text-3xl font-light">Nová aktulizace</h2>
             <p class="blog-text text-l">Lorem ipsum dolo ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo </p>
           
             <div class="blog-data">
                 <span class="blog-date text-xl blog-data-border">2023/05/16</span>
                 <span class="blog-category text-xl blog-data-border">IT</span>
                 <span class="blog-role text-xl blog-data-border">Updates</span>
-                <a href="#" class="blog-link text-xl ml-20">Read more</a>
+                <a href="#" class="blog-link text-xl ml-20 text-white">Read more</a>
             </div>
         </div>
         <div id="blog" class="blog-container">
-            <h2 class="blog-title text-3xl font-bold">Discord update 3</h2>
+            <h2 class="blog-title text-3xl font-light">Nová aktulizace</h2>
             <p class="blog-text text-l">Lorem ipsum dolo ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo </p>
           
             <div class="blog-data">
                 <span class="blog-date text-xl blog-data-border">2023/05/16</span>
                 <span class="blog-category text-xl blog-data-border">IT</span>
                 <span class="blog-role text-xl blog-data-border">Updates</span>
-                <a href="#" class="blog-link text-xl ml-20">Read more</a>
+                <a href="#" class="blog-link text-xl ml-20 text-white">Read more</a>
             </div>
         </div>
-
+        <div id="blog" class="blog-container">
+            <h2 class="blog-title text-3xl font-light">Nová aktulizace</h2>
+            <p class="blog-text text-l">Lorem ipsum dolo ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo  ipsum dolo </p>
+          
+            <div class="blog-data">
+                <span class="blog-date text-xl blog-data-border">2023/05/16</span>
+                <span class="blog-category text-xl blog-data-border">IT</span>
+                <span class="blog-role text-xl blog-data-border">Updates</span>
+                <a href="#" class="blog-link text-xl ml-20 text-white">Read more</a>
+            </div>
+        </div>
+        
     
 
     
-     
-
+    
     </div>
     <script src="https://kit.fontawesome.com/d798d3878a.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
-<script src="./js/scrollFadeOut.js"></script>
+
+<script src="./js/cursor.js"></script>
+<script src="./js/reTypeText.js"></script>
+<script src="./js/pageMoveEffect.js"></script>
 <script src="./js/navBar.js"></script>
