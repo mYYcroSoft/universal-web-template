@@ -24,7 +24,7 @@ body{
     text-align: ce;
 }
 .welcome-text{
-   font-size: 5vw;
+   font-size: 3vw;
 
  
 }
@@ -107,7 +107,7 @@ body{
 .langugage_skillBar{
 
   display: block;
-  width: 100%;
+  width: 45%;
   height: 5px;
   background-color: #0bedbc;
   border-radius: 15px;
@@ -243,11 +243,18 @@ body{
     text-align: center;
   }
   .welcome-text{
+ 
     font-size: 8vw;
 
   }
+  .wcm_IM{
+
+    margin-left: -100pt;
+  }
   #feature-text{
-    margin-left:  5pt;
+    position: absolute;
+    
+    
   }
   .languages{
     width: 60%;
