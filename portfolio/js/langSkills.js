@@ -34,3 +34,23 @@
     });
   });
 
+    languageBoxes.forEach((box) => {
+    box.addEventListener('mouseover' && 'click', (event) => {
+        langugageSelected = true
+      const languageName = event.target.innerText.trim();
+      const skill = skillsMap[languageName];
+        document.getElementById("skillsContainer").style.opacity = 0.7;
+        document.getElementById("skill_name").innerText = languageName;
+        document.getElementById("skillBar").style.width = `${skill}%`;
+    });
+
+    box.addEventListener('mouseout', () => {
+        langugageSelected = false
+        setTimeout(function () {
+            if (langugageSelected == false) {
+
+                document.getElementById("skillsContainer").style.opacity = 0;
+            }
+        }, 500); 
+    });
+  });

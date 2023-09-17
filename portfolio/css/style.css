@@ -18,14 +18,17 @@ body{
 .welcome_container{
     position: fixed;
     padding: 50pt;
-    width: 40%;
+    width: 100%;
     left: 10%;
     top: 10%;
+    text-align: ce;
 }
 .welcome-text{
-    color: white;
+   font-size: 3vw;
+
  
 }
+
 
 .socialIcon{
   position: relative;
@@ -104,7 +107,7 @@ body{
 .langugage_skillBar{
 
   display: block;
-  width: 100%;
+  width: 45%;
   height: 5px;
   background-color: #0bedbc;
   border-radius: 15px;
@@ -131,8 +134,7 @@ body{
 .blog-catalog{
     position: absolute;
   
-   
-    
+
     width: 40%;
     height: 200%;
     right: 80pt;
@@ -233,3 +235,64 @@ body{
   padding: 15pt;
 }
 
+@media screen and (max-width: 800px) {
+  .welcome_container{
+    position: absolute;
+   
+    width: 90%;
+    text-align: center;
+  }
+  .welcome-text{
+ 
+    font-size: 8vw;
+
+  }
+  .wcm_IM{
+
+    margin-left: -100pt;
+  }
+  #feature-text{
+    position: absolute;
+    
+    
+  }
+  .languages{
+    width: 60%;
+    
+  }
+  .langugage_box{
+    height: 80px;
+    width: 80px;
+    margin-top: 5pt;
+    margin-left: 5pt;
+    margin-right: 5pt;
+  }
+  .language_name{
+    font-size: 5vw;
+  }
+  .langugage_skills{
+    width: 100%;
+  }
+  .blog-catalog{
+    top: 125%;
+    width: 80%;
+    right: 5%;
+  }
+  .socials{
+    width: 100%;
+ 
+  }
+  .socialIcon{
+    font-size: 25pt;
+    margin-right: 5pt;
+  }
+  .navigrationBar{
+    width: 7%;
+
+  }
+  .navigrationBarIcon{
+    font-size: 20px;
+  }
+
+
+}
