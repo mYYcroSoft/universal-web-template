@@ -15,6 +15,16 @@ body{
 
 }
 
+h2{
+  font-size: 17pt;
+  font-weight: 500;
+}
+
+li{
+  font-size: 13pt;
+  color: #b2b2b2;
+}
+
 .welcome_container{
     position: fixed;
     padding: 50pt;
@@ -234,6 +244,18 @@ body{
 .nav-container{
   text-align: left;
   padding: 15pt;
+  color: #fff;
+}
+
+.navItems{
+  margin-top: 5pt;
+  margin-left: 10pt;
+  text-decoration: none;
+  list-style-type: decimal;
+}
+.navSec{
+  margin-top: 15pt;
+  margin-left: 10pt;
 }
 
 @media screen and (max-width: 800px) {
@@ -295,5 +317,8 @@ body{
     font-size: 20px;
   }
 
+  .navigrationBar::after{
+  
+  }
 
 }
