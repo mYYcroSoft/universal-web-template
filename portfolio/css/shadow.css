@@ -1,0 +1,25 @@
+.shadow{
+    display: block;
+    position: fixed;
+    width: 100%;
+  
+
+    
+    right: 1%;
+
+    box-shadow: #4ed7d0bf 10px 10px 230px 50px;
+    opacity: 0.3;
+}
+
+.BottomShadow{
+    display: block;
+    position: absolute;
+    width: 90%;
+  
+
+    bottom: 0;
+    right: 1%;
+
+    box-shadow: #4ed7d0fd 1px 1px 100px 20px;
+    opacity: 0.3;
+}
