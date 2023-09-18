@@ -1,5 +1,5 @@
 .pageLoad{
-    position: absolute;
+    position: fixed;
   
     background-color: rgb(34, 34, 46);
     opacity: 1;
@@ -12,7 +12,7 @@
     justify-content: center;
 }
 .loader {
-position: absolute;
+position: fixed;
     border: 16px solid #39374F; /* Light grey */
     border-top: 16px solid #37A8A2; /* Blue */
     border-radius: 50%;
