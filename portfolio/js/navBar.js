@@ -23,3 +23,11 @@ navBar.addEventListener('click', function(){
     
 
 }) 
+
+
+
+
+function osExit(){
+    console.log("AOJ")
+    document.getElementById('os-window').style.display = "none"
+}
