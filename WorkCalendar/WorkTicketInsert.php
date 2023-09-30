@@ -1,6 +1,8 @@
 <?php 
 session_start();
-$_SESSION['GlobalDayData'] = nil;
+//$_SESSION['GlobalDayData'] = nil;
+
+include 'sql.php';
 
 function calculateDaysBetween($start_date, $end_date) {
     $start = new DateTime($start_date);
@@ -37,6 +39,7 @@ function addDataToday($days_between){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $title = $_POST['title'];
+$id = $_POST['id'];
 $day_f = $_POST['date-from'];
 $day_t = $_POST['date-to'];
 
@@ -44,18 +47,24 @@ echo $title . '<br>';
 echo "Začíná od ${day_f} <br>";
 echo "Končí ${day_t} <br>";
 $days_between = calculateDaysBetween($day_f, $day_t);
-$dyas_data = addDataToday($days_between);
+$days_data = addDataToday($days_between) ;
 
 foreach (addDataToday($days_between) as $index => $day){
-    print_r($day);
 }
 
+$id = mysqli_real_escape_string($conn, $id);
+$days_data_json = json_encode($days_data);
 
 
+$sql = "INSERT INTO workticket (id, day_data) VALUES ('$id', '$days_data_json')";
 
+if ($conn->query($sql) === TRUE) {
+  echo "Record inserted successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
-
-
+$conn->close();
 
 }
 
