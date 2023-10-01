@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="./css/typewrite.css">
     <link rel="stylesheet" href="./css/shadow.css">
+    <link rel="stylesheet" href="./css/os.css">
     
 </head>
 <body>
@@ -24,7 +25,59 @@
     <div class="cursor2"></div>
     <div class="shadow"></div>
 
-   
+<div class="os-window" id="os-window"  style="display: block;">
+    <div class="os-header">
+        <div class="os-header-title">
+            Ceník služeb
+        </div>
+        <div class="os-header-controls">
+            <i class="fa-sharp fa-solid fa-circle-xmark " onclick="osExit()"></i>
+        </div>
+    </div>
+
+    <div class="os-window-content">
+       <!-- Dynamic changing content-->
+        <table class="price-table">
+            <tr class="table-header">
+                <th>Název služby</th>
+                <th>Platební interval</th>
+                <th>Cena</th>
+                <th>Záloha</th>
+            </tr>
+            <tr>
+                <td>Web development</td>
+                <td>Hodina</td>
+                <td>300czk</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>FiveM development</td>
+                <td>Týden</td>
+                <td>800czk</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>Webová stránka</td>
+                <td>Jednorázově</td>
+                <td>až 5000czk</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>Desktpová aplikace</td>
+                <td>Jednorázově</td>
+                <td>až 5000czk</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>FiveM script</td>
+                <td>Jednorázově</td>
+                <td>až 2000czk</td>
+                <td>30%</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
     
 <div class="navigrationBar" id="navBar" >
     <i class="fa-solid fa-bars navigrationBarIcon" id="navIcon"></i>
