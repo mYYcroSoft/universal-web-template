@@ -15,7 +15,7 @@ function calculateDaysBetween($start_date, $end_date) {
         $daysArray[] = $date->format('Y-m-d');
     }
 
-    // Přidání i posledního dne (end_date)
+
     $daysArray[] = $end->format('Y-m-d');
 
     return $daysArray;
@@ -28,7 +28,7 @@ function addDataToday($days_between){
         $DayData = array(
             'index' => $index,
             'date' => $day,
-            'text_data' => 'Žádné informace',
+            'text_data' => "No informations",
             'work' => true
         );
         $days_data[$index] = $DayData;

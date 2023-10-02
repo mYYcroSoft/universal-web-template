@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYSP | Your data</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>MYSP | Objednávky</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>¨
+    <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
-    <button id="getDataButton">Get Data</button>
-    <input type="number" name="id" id="id" placeholder="Identifier" value="15">
-    <div id="result"></div>
-</body>
+<div class="shadow"></div>
+
+
+
+<div class="search-container" id="search-container" style="display: none;">
+    <span class="info-text">Vyhledejte svou zakázku.</span>
+    <br><br>
+
+    <input class="id-input" type="number" placeholder="Identifikátor zakázky" id="identifier">
+    <button type="submit" class="fa-solid fa-magnifying-glass id-input-search" id="getDataButton"></button>
+
+
+</div>
+
+
+
+<div class="day_info_container" id="dfc" style="display: none;">    
+    <h1 class="day_info_container_title">Informace</h1>
+</div>
+<div id="days-container">  
+    <div class="day_box" data-atatus="" data-info="" onmouseenter="openInfo()" onmouseleave="closeInfo()">
+            <div class="date">2023-10-02</div><br>
+            <div class="status">Aktivní</div>
+            <div class="index">1</div><br>
+    </div>
+
+
+</div>
+    
+<script src="https://kit.fontawesome.com/d798d3878a.js" crossorigin="anonymous"></script>
 <script src="js/ajax.js"></script>
+<script src="js/infoBox.js"></script>
 </html>
