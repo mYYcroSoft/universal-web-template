@@ -17,26 +17,30 @@ $(document).ready(function() {
           jsonData.forEach(element => {
             
             var status = "Aktivní"
-            var backgroundClr = 'rgb(55, 55, 69)';
+            var backgroundClr = 'rgba(34, 34, 46, 0.403)';
+            var opacity = 1
             var toDayDate = getCurrentDate()
             if(element['work'] == false) {
               console.log("KOKOT")
               status = "Zrušeno"
-              backgroundClr = 'rgb(132, 43, 43)';
+              backgroundClr = 'rgba(245, 9, 9, 0.0)';
+              opacity = 0.2
             }
 
             console.log(element['date'] , ' ' , toDayDate)
             if (element['date'] == toDayDate){
               backgroundClr = '#0a8e71';
+              opacity = 0.5
             }
 
             $('#days-container').append(
               `
-            <div class="day_box" style="background-color: ${backgroundClr}">
-            <div class="date">${element['date']}</div><br>
-            <div class="index">${element['index']}</div><br>
-                <div class="info">${element['text_data']}</div><br>
-                <div class="status">${status}</div>
+      
+
+            <div class="day_box" style="background-color: ${backgroundClr}; opacity: ${opacity}" data-atatus="${element['work']}" data-info="${element['text_data']}" onmouseenter="openInfo()" onmouseleave="closeInfo()">
+              <div class="date">${element['date']}</div><br>
+              <div class="status">${status}</div>
+              <div class="index">${element['index']}</div><br>
             </div>
               `
             )
