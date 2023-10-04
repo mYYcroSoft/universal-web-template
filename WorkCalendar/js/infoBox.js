@@ -3,11 +3,11 @@ var navBar = document.getElementById('dfc')
 let navOpen = false
 
 function openInfo(id){ 
-       const data =  id.parentNode.getAttribute("data-info")
+       const data =  id.getAttribute("data-info")
        console.log(data)
         navBar.style.width = '25%';
         navBar.style.display = "block";
-
+        document.getElementById('infoId').innerText = data
 
 }
 
