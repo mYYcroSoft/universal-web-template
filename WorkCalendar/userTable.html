@@ -9,10 +9,14 @@
 </head>
 <body>
 <div class="shadow"></div>
+<div class="shadow-d"></div>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<div class="pageLoad" id="pageLoad" style="display: none;">
+    <div class="loader"></div>
+</div>
 
-
-
-<div class="search-container" id="search-container" style="display: none;">
+<div class="search-container" id="search-container" style="display: block;">
     <span class="info-text">Vyhledejte svou zakázku.</span>
     <br><br>
 
@@ -28,16 +32,12 @@
     <h1 class="day_info_container_title">Informace</h1>
 </div>
 <div id="days-container">  
-    <div class="day_box" data-atatus="" data-info="" onmouseenter="openInfo()" onmouseleave="closeInfo()">
-            <div class="date">2023-10-02</div><br>
-            <div class="status">Aktivní</div>
-            <div class="index">1</div><br>
-    </div>
-
+ 
 
 </div>
     
 <script src="https://kit.fontawesome.com/d798d3878a.js" crossorigin="anonymous"></script>
 <script src="js/ajax.js"></script>
 <script src="js/infoBox.js"></script>
+<script src="js/cursor.js"></script>
 </html>

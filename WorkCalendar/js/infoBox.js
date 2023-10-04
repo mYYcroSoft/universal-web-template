@@ -2,13 +2,13 @@ var DayBox = document.getElementsByClassName('day_box')
 var navBar = document.getElementById('dfc')
 let navOpen = false
 
-function openInfo(){
-
-      
+function openInfo(id){ 
+       const data =  id.parentNode.getAttribute("data-info")
+       console.log(data)
         navBar.style.width = '25%';
-
         navBar.style.display = "block";
-    
+
+
 }
 
 function closeInfo(){
@@ -19,3 +19,4 @@ function closeInfo(){
         navBar.style.display = "none";
     
 }
+
