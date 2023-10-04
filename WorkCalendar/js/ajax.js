@@ -5,43 +5,45 @@ $(document).ready(function() {
     $('#getDataButton').click(function() {
         var id = document.getElementById('identifier').value
         console.log(id)
+        loading(true)
       $.ajax({
         url: 'php/getDayData.php',  
         type: 'GET',
         data: {id:id},
         success: function(data) {
+        
           document.getElementById('search-container').style.display = 'none';
           document.getElementById('days-container').innerHTML = '';
           console.log(data)
           var jsonData = JSON.parse(data);
+          loading(false)
           jsonData.forEach(element => {
             
             var status = "Aktivní"
             var backgroundClr = 'rgba(34, 34, 46, 0.403)';
-            var opacity = 1
             var toDayDate = getCurrentDate()
+            var opatcity = 1
             if(element['work'] == false) {
               console.log("KOKOT")
               status = "Zrušeno"
-              backgroundClr = 'rgba(245, 9, 9, 0.0)';
-              opacity = 0.2
+              opatcity = 0.2;
+              backgroundClr = 'rgba(132, 43, 43, 0)';
             }
 
             console.log(element['date'] , ' ' , toDayDate)
             if (element['date'] == toDayDate){
               backgroundClr = '#0a8e71';
-              opacity = 0.5
+              opatcity = 0.5;
             }
 
             $('#days-container').append(
               `
-      
-
-            <div class="day_box" style="background-color: ${backgroundClr}; opacity: ${opacity}" data-atatus="${element['work']}" data-info="${element['text_data']}" onmouseenter="openInfo()" onmouseleave="closeInfo()">
+            <div class="day_box" style="background-color: ${backgroundClr}; opacity: ${opatcity}" data-atatus="${element['work']}" data-info="${element['text_data']}" onmouseenter="openInfo(this)" onmouseleave="closeInfo()">
               <div class="date">${element['date']}</div><br>
               <div class="status">${status}</div>
               <div class="index">${element['index']}</div><br>
             </div>
+  
               `
             )
           });
@@ -64,3 +66,33 @@ $(document).ready(function() {
         return `${year}-${month}-${day}`;
       }
       
+
+
+
+      function loading(stat){
+        const pageLoad = document.getElementById('pageLoad')
+
+
+
+        if(stat == true ){
+          pageLoad.style.display = 'block'
+        }
+        
+
+        if(stat == false ){
+            
+                  
+        setTimeout(function () {
+          pageLoad.style.opacity = 0;
+          setTimeout(function () {
+            pageLoad.style.opacity = 0;
+            pageLoad.style.display = 'none'
+            pageLoad.style.zIndex = '0'
+          }, 700);
+        }, 300); 
+                }
+       
+       
+ 
+
+      }
