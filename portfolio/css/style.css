@@ -214,7 +214,7 @@ li{
   .navigrationBar{
     position: fixed;
 
-    background-color: #252432;
+    background-color: #25243209;
     width: 5%;
     height: 100%;
     text-align: center;
@@ -256,6 +256,16 @@ li{
 .navSec{
   margin-top: 15pt;
   margin-left: 10pt;
+}
+
+.navBoxTitleVertical{
+  position: relative;
+  top: 10%;
+  left: 0%;
+  transform: rotate(-90deg);
+  transition: 0.2s;
+
+  padding: 5pt;
 }
 
 @media screen and (max-width: 800px) {
