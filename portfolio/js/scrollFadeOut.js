@@ -1,4 +1,4 @@
-const blogContainers = document.querySelectorAll('.blog-container');
+    const blogContainers = document.querySelectorAll('.blog-container');
 const catalog = document.getElementById('blogCatalog')
 
 let BlogCount = 0
