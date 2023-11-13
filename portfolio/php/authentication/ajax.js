@@ -1,5 +1,6 @@
 let sessionKey = null
 const login = document.getElementById("loginEvent")
+const destroy = document.getElementById("DestroySesttion")
 function getCookie(cookieName) {
     const name = `${cookieName}=`;
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -34,7 +35,7 @@ login.addEventListener('click', function(){
         dataType: 'json',        
         success: function(response) {
                 console.log(response)
-                writeTokenToCookie(response)
+                /*writeTokenToCookie(response)*/
         }, 
         error: function(xhr, status, error) {
             // Funkce vykonávaná při chybě při komunikaci s serverem
@@ -42,4 +43,25 @@ login.addEventListener('click', function(){
         }
     });
     
+})
+destroy.addEventListener('click', function()
+{
+    
+    
+  $.ajax({
+    url: './authentication/sessionDestory.php',  
+    type: 'POST',              
+    data: {},  
+    dataType: 'json',        
+    success: function(response) {
+            console.log(response)
+            /*writeTokenToCookie(response)*/
+    }, 
+    error: function(xhr, status, error) {
+        // Funkce vykonávaná při chybě při komunikaci s serverem
+        console.error('Chyba při komunikaci se serverem:', error);
+    }
+});
+
+
 })
