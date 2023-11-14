@@ -14,6 +14,10 @@ $.ajax({
     dataType: 'json',        
     success: function(response) {
             console.log(response)
+            if (response['status'] == 'login'){
+                document.cookie =  {token: response['token']} 
+                console.log(document.cookie);
+            }
             /*writeTokenToCookie(response)*/
     }, 
     error: function(xhr, status, error) {
@@ -32,13 +36,17 @@ removeSes.addEventListener('click', function(){
         type: 'POST',              
         data: {action: 'removeSes'},  
         dataType: 'json',        
-        success: function(response) {
-                /*console.log(response)*/
-                /*writeTokenToCookie(response)*/
+        success: function($reponse) {
+           
+                
         }, 
         error: function(xhr, status, error) {
-            // Funkce vykonávaná při chybě při komunikaci s serverem
             console.error('Chyba při komunikaci se serverem:', error);
         }
     });
+})
+
+
+cookie.addEventListener('click', function(){
+    console.log(document.cookie);
 })
