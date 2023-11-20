@@ -1,9 +1,9 @@
 <?php 
 
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+$servername = "162.19.139.137";
+$username = "u23468_XIUQvUGkWa";
+$password = "Dj3kpS0t5cGzoxpa8Y1vIiu1";
+$dbname = "s23468_mysp-system";
 
 // Create connection
 

@@ -1,0 +1,69 @@
+  .projects {
+  
+            position: fixed;
+            width: 100%;
+            background-color: #252432;
+            height: 30%;
+            bottom: 0;
+            padding: 2rem;
+            z-index: 5;
+            border-top: 2px solid #0bedbc;
+
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+            
+        }
+
+     
+        .projectBox {
+
+            flex: 0 0 auto;
+            background-color: #34333e51;
+            border-radius: 15px;
+            padding: 3rem;
+            width: 15vw;
+            height: 20vh;
+            border: solid #0bedbc 1px;
+            box-shadow: #4ed7d000 1px 1px 50px 1px;
+            transition: 0.3s;
+            color: #c3c3c37a;
+            margin-right: 3%; /* Opraveno: změněno na margin-right */
+        }
+
+        .projectBox:hover{
+            transition: 0.3s;
+            border: solid #4ef6d2 1px;
+            box-shadow: #4ed7d0fe 1px 1px 50px 1px;
+            color: #0bedbc;
+        }
+
+        .projecTitle{
+            position: relative;
+            font-size: 1.5vw;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        
+        .projectParalax{
+            font-size: 0.8vw;
+        }
+        .projectTags{
+           
+          
+            top: 5rem;
+        }
+        .projectTag{
+            background-color: #252432;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #4ef6d24c;
+            font-size: 0.7vw;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .projects{
+                display: none;
+              }
+        }
