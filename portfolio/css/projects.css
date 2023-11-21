@@ -21,7 +21,7 @@
             flex: 0 0 auto;
             background-color: #34333e51;
             border-radius: 15px;
-            padding: 3rem;
+            padding: 1rem;
             width: 15vw;
             height: 20vh;
             border: solid #0bedbc 1px;
@@ -63,7 +63,32 @@
         }
 
         @media screen and (max-width: 1600px) {
-            .projects{
-                display: none;
-              }
+            
+
+            .projectBox{
+                width: 20vw;
+
+            }
+            .projecTitle{
+                font-size: 2vw;
+            }
+        }
+
+
+        @media screen and (max-width: 380px) {
+            
+
+            .projectBox{
+                width: 55vw;
+
+            }
+            .projecTitle{
+                font-size: 5vw;
+            }
+            .projectParalax{
+                font-size: 3vw;
+            }
+            .projectTag{
+                font-size: 2vw;
+            }
         }
