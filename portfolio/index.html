@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <title>Developer MYYCRO</title>
     <link rel="stylesheet" href="./css/style.css">
@@ -69,7 +70,7 @@
                 <td>až 5000czk</td>
                 <td>50%</td>
             </tr>
-            <tr>
+            <tr> 
                 <td>FiveM script</td>
                 <td>Jednorázově</td>
                 <td>až 2000czk</td>
@@ -80,7 +81,7 @@
     </div>
 </div>
 
-<div class="projects" >
+<div class="projects" id="projectContainer" >
 
     
         <div class="projectBox">
@@ -94,140 +95,7 @@
                 <span class="projectTag">Web</span>
             </div>
         </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Převodník měn
-            </h3>
-            <span class="projectParalax">
-                Měnový převádeč.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">Web</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-              Webová hra
-            </h3>
-            <span class="projectParalax">
-                Webová 2d hra s vlastní fyzikou.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">Web</span>
-            </div>
-        </div>
-   
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                FCLUA
-            </h3>
-            <span class="projectParalax">
-                Distributor softwaru.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">Web</span>
-            </div>
-        </div>
-   
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Community works
-            </h3>
-            <span class="projectParalax">
-                 Veřejně prospěšné práce.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Tebex</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Job garage
-            </h3>
-            <span class="projectParalax">
-                Garáže pro frakce.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-   
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Car selector
-            </h3>
-            <span class="projectParalax">
-                Výber prvního vozidla.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Police evidence
-            </h3>
-            <span class="projectParalax">
-                Policejní pytlíčky.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-     
-      <div class="projectBox">
-            <h3 class="projecTitle">
-                Search system
-            </h3>
-            <span class="projectParalax">
-                Zabezpečené prohledávání hračů.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Story selector
-            </h3>
-            <span class="projectParalax">
-                Výber story a spawnu postavy.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                Panic button
-            </h3>
-            <span class="projectParalax">
-                Policejná alarm.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-        <div class="projectBox">
-            <h3 class="projecTitle">
-                First person
-            </h3>
-            <span class="projectParalax">
-                <b>Jedinečný</b> systém ovládání hráče.
-            </span>
-            <div class="projectTags">
-                <span class="projectTag">FiveM</span>
-                <span class="projectTag">Soukromé</span>
-            </div>
-        </div>
-  
+
 </div>
 <div class="navigrationBar" id="navBar" >
     <i class="fa-solid fa-bars navigrationBarIcon" id="navIcon"></i>
@@ -344,7 +212,9 @@
 <script src="./js/reTypeText.js"></script>
 <script src="./js/pageMoveEffect.js"></script>
 <script src="./js/navBar.js"></script>
-<script src="./js/langSkills.js"></script>  
+<script src="./js/langSkills.js"></script> 
+<script src="./js/projectList.js"></script>  
+<script src="./js/projectLoader.js"></script> 
 </body>
 </html>
 
