@@ -7,7 +7,7 @@ function loadProjects() {
         console.log(projectData)
         $(projectContainer).append(
             `
-        <div class="projectBox" data-id=${projectData.id}>
+        <div class="projectBox" data-id=${projectData.id} id="proj" onclick="openProject(this)">
             <h3 class="projecTitle">
                 ${projectData.name}
             </h3>
@@ -33,9 +33,6 @@ function loadProjects() {
 loadProjects();
 
 
-boxs = document.getElementsByClassName('projectBox')
-
-boxs.addEventListener('click', function() {
-    console.log('click')
-})
-
+function openProject(obj){
+    console.log(obj.dataset.id)
+}
