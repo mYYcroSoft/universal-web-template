@@ -36,3 +36,9 @@ loadProjects();
 function openProject(obj){
     console.log(obj.dataset.id)
 }
+projNav = document.getElementById('projectNav')
+
+projNav.addEventListener('click', function(e){
+    console.log("SD");
+    projNav.style.bottom = "0%"
+});
