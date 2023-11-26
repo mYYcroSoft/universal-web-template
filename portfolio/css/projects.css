@@ -1,0 +1,149 @@
+.projectListNavBar{
+    position: fixed;
+   /* background-color: #3e3d53;*/
+    width: 100%;
+    z-index: 10;
+    height: 3rem;
+    text-align: center;
+    color: #4ef6d2;
+    animation: arrowJump 0.8s linear infinite;
+}
+.fa-angles-up{
+    font-size: 3rem;
+    text-shadow: #4ef6d2 0px 10px 15px ;
+}
+
+#projNavIcon{
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+
+@keyframes arrowJump{
+    0% {bottom: 2%;}
+    50% {bottom: 4%;  color: #00ffc8;}
+    100% {bottom: 2%; color: #00ffc8}
+}
+
+.projectContainer{
+    position: fixed;
+    display: flex;
+    padding: 10rem;
+    background-color: rgb(39, 39, 55);
+    width: 100%;
+
+    bottom: -100%;
+    height: 100%;
+    transition: 0.3s;
+
+}
+.projectListNavBar:hover + .projectContainer {
+    transition: 0.3s;
+    bottom: -99%;
+  }
+
+.projects {
+  
+            position: fixed;
+            width: 100%;
+          
+            height: 30%;
+            bottom: 5rem;
+            padding-top: 8rem;
+            z-index: 5;
+           
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+            
+        }
+        .projectShadow{
+            display: block;
+            position: absolute;
+           
+            width: 100%;
+            z-index: 10;
+            bottom: 0;
+
+        }
+
+     
+        .projectBox {   
+            position: relative;
+            display: inline-block;
+            background-color: #34333ec0;
+            border-radius: 15px;
+            padding: 1rem;
+            width: 50%;
+            height: 20vh;
+            border: solid #0bedbc00 1px;
+            box-shadow: #4ed7d000 1px 1px 50px 1px;
+            transition: 0.3s;
+            opacity: 1;
+            color: #c3c3c37a;
+            margin-right: 3%; /* Opraveno: změněno na margin-right */
+        }
+
+        .projectBox:hover{
+            transition: 0.3s;
+            border: solid #4ef6d2 1px;
+            box-shadow: #4ed7d0fe 1px 1px 50px 1px;
+            color: #0bedbc;
+            opacity: 1;
+        }
+
+        .projecTitle{
+            position: relative;
+            font-size: 1.5vw;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        
+        .projectParalax{
+            font-size: 0.8vw;
+        }
+        .projectTags{
+           
+          
+            top: 5rem;
+        }
+        .projectTag{
+            background-color: #252432;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #4ef6d24c;
+            font-size: 0.7vw;
+        }
+
+        @media screen and (max-width: 1600px) {
+            
+
+            .projectBox{
+                width: 20vw;
+                height: auto;
+
+            }
+            .projecTitle{
+                font-size: 2vw;
+            }
+        }
+
+
+        @media screen and (max-width: 380px) {
+            
+
+            .projectBox{
+                width: 55vw;
+
+            }
+            .projecTitle{
+                font-size: 5vw;
+            }
+            .projectParalax{
+                font-size: 3vw;
+            }
+            .projectTag{
+                font-size: 2vw;
+            }
+        }

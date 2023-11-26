@@ -25,9 +25,22 @@ navBar.addEventListener('click', function(){
 }) 
 
 
+export function open(status){
 
+    if (status == true){
+        navBar.style.width = '70%';
+        navBarIcon.style.color = '#ffffff00';
+        navCont.style.display = "block";
+    } else {
+        navBar.style.width = '5%';
+        navBarIcon.style.color = '#fff';
+        navCont.style.display = "none";
+    }
+  
+}
 
 function osExit(){
     console.log("AOJ")
     document.getElementById('os-window').style.display = "none"
 }
+
