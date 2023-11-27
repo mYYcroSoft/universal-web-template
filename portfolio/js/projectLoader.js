@@ -13,10 +13,10 @@ function loadProjects() {
             <h3 class="projecTitle">
                 ${projectData.name}
             </h3>
-            <span class="projectParalax">
+            <span class="projectParalax" alt="${projectData.par}">
                  ${projectData.par}
             </span>
-            <div class="projectTags">
+            <div class="projectTags" alt="Project">
                 <span class="projectTag">    ${projectData.tags}</span>
             </div>
       

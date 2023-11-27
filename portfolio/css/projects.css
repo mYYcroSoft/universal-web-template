@@ -28,9 +28,7 @@
     bottom: -100%;
     height: 100%;
 
-    transition: 0.3s;
-  
-
+    transition: 0.3s
 }
 .projectListNavBar:hover + .projectContainer {
     transition: 0.3s;
