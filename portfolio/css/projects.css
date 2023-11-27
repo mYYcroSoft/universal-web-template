@@ -8,7 +8,7 @@
     color: #4ef6d2;
     animation: arrowJump 0.8s linear infinite;
 }
-.fa-angles-up{
+.fa-computer-mouse{
     font-size: 3rem;
     text-shadow: #4ef6d2 0px 10px 15px ;
 }
@@ -23,31 +23,33 @@
 .projectContainer{
     position: fixed;
     display: block;
-    background-color: rgb(150, 97, 97);
+    background-color: rgb(44, 44, 57);
     width: 100%;
     bottom: -100%;
     height: 100%;
+
     transition: 0.3s;
+  
 
 }
 .projectListNavBar:hover + .projectContainer {
     transition: 0.3s;
-    bottom: -99%;
+    bottom: -98%;
   }
 
 .projects {
   
-            position: fixed;
+            position: relative;
             width: 100%;
-          
-            height: 30%;
-            bottom: 5rem;
-            padding-top: 8rem;
-            z-index: 5;
+            left: 10%;
+            height: 100%;
+
+            padding-top: 3rem;
+            z-index: 50;
            
-            display: flex;
+        
             overflow-x: scroll;
-            white-space: nowrap;
+     
             
         }
         .projectShadow{
@@ -63,11 +65,12 @@
      
         .projectBox {
 
-            flex: 0 0 auto;
-            background-color: #34333ec0;
+            display: inline-block;
+        
             border-radius: 15px;
-            padding: 1rem;
+            
             width: 15vw;
+            margin-top: 3rem;
             height: 20vh;
             border: solid #0bedbc 1px;
             box-shadow: #4ed7d000 1px 1px 50px 1px;
@@ -75,30 +78,54 @@
             opacity: 1;
             color: #c3c3c37a;
             margin-right: 3%; /* Opraveno: změněno na margin-right */
+   
         }
+    
+        .projectImg{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url("../gallery/sdh_tlumacov/test.png");
+            border-radius: 1rem;
+            opacity: 1;
+        }
+     
 
-        .projectBox:hover{
+        .projctShadow{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            background: linear-gradient(130deg, rgba(37, 42, 53, 0.95) 25%, rgba(0, 0, 0, 0.507) 100%);
+            transition: 0.2s;
+        }
+        
+        .projectBox:hover  {
             transition: 0.3s;
             border: solid #4ef6d2 1px;
             box-shadow: #4ed7d0fe 1px 1px 50px 1px;
             color: #0bedbc;
             opacity: 1;
         }
+       
+        
 
         .projecTitle{
             position: relative;
             font-size: 1.5vw;
             font-family: "Trebuchet MS", Arial, sans-serif;
             font-weight: 500;
+            padding: 1rem;
         }
 
         
         .projectParalax{
             font-size: 0.8vw;
+            padding: 1rem;
         }
         .projectTags{
            
-          
+            padding: 1rem;
             top: 5rem;
         }
         .projectTag{

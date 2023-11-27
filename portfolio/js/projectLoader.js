@@ -1,6 +1,6 @@
 
 function loadProjects() {
-    var projectContainer = document.getElementById("projectContainer");
+    var projectContainer = document.getElementById("projList");
 
     for (let proj in project_list) {
         var projectData = project_list[proj];
@@ -8,6 +8,8 @@ function loadProjects() {
         $(projectContainer).append(
             `
         <div class="projectBox" data-id=${projectData.id} id="proj" onclick="openProject(this)">
+        <div class="projectImg">
+        <div class="projctShadow">
             <h3 class="projecTitle">
                 ${projectData.name}
             </h3>
@@ -17,6 +19,7 @@ function loadProjects() {
             <div class="projectTags">
                 <span class="projectTag">    ${projectData.tags}</span>
             </div>
+      
         </div>
             `
         )
@@ -30,15 +33,25 @@ function loadProjects() {
 
 
 
-loadProjects();
-
 
 function openProject(obj){
     console.log(obj.dataset.id)
 }
-projNav = document.getElementById('projectNav')
 
+projContainerOpen = false 
+projNav = document.getElementById('projectNav')
+projContainer = document.getElementById('projContainer')
+projList = document.getElementById('projList')
 projNav.addEventListener('click', function(e){
-    console.log("SD");
-    projNav.style.bottom = "0%"
+    if(projContainerOpen == false){
+
+
+        loadProjects();
+        projContainer.style.bottom = '0%'
+        projContainerOpen = true
+    } else {
+        projList.innerHTML = ''
+        projContainer.style.bottom = '-100%'
+        projContainerOpen = false
+    }
 });
