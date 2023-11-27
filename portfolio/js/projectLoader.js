@@ -7,7 +7,7 @@ function loadProjects() {
         console.log(projectData)
         $(projectContainer).append(
             `
-        <div class="projectBox" data-id=${projectData.id} id="proj" onclick="openProject(this)">
+        <div class="projectBox" data-id=${proj} id="proj" onclick="openProjectInfo(this)">
         <div class="projectImg">
         <div class="projctShadow">
             <h3 class="projecTitle">
@@ -55,3 +55,20 @@ projNav.addEventListener('click', function(e){
         projContainerOpen = false
     }
 });
+
+
+var projectBoxStatus = false
+var projBox = document.getElementById('projectInfoBox')
+function openProjectInfo(id){
+if(projectBoxStatus == false){
+    projBox.style.right = '0%'
+    projectBoxStatus = true
+ } else {
+    projBox.style.right = '-100%'
+    projectBoxStatus = false
+ }
+
+
+    const projData = id.getAttribute("data-id")
+    console.log(project_list[projData]);
+}

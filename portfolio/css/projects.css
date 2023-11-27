@@ -134,6 +134,17 @@
             font-size: 0.7vw;
         }
 
+        .projectInfoBox{
+            position: fixed;
+            right: -100%;
+            width: 30%;
+            height: 100%;
+            z-index: 6;
+            background-color: rgb(34, 34, 43);
+            text-align: center;
+            transition: 0.3s;
+        }
+
         @media screen and (max-width: 1600px) {
             
 
