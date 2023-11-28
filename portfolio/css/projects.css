@@ -136,7 +136,7 @@
 
         .projectInfoBox{
             position: fixed;
-            right: 0%;
+            right: -100%;
             width: 30%;
             height: 100%;
             z-index: 6;
@@ -175,7 +175,28 @@
             padding: 1rem;
             margin-top: 20px;
         }
+
+        .projectListControls{
+            position: relative;
+            width: 100%;
+            height: 6%;
+            background-color: #252432;  
+            text-align: center;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 100;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
         
+        .projectListControls button{
+            background-color: #312e49;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #4ef6d2;
+            font-size: 0.7vw;   
+            
+        }
 
         @media screen and (max-width: 1600px) {
             
@@ -208,3 +229,5 @@
                 font-size: 2vw;
             }
         }
+
+

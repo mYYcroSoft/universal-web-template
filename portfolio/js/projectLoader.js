@@ -69,8 +69,50 @@ if(projectBoxStatus == false){
     projectBoxStatus = false
  }
 
+var infotitle = document.getElementById('infoBoxTitle')
+var infotext = document.getElementById('InfoBoxText')
+    const dataObjectId = id.getAttribute("data-id")
+    const dataObjectData  = project_list[dataObjectId]
 
-    const projData = id.getAttribute("data-id")
-    console.log(project_list[projData]);
+    infotitle.innerText = dataObjectData.name
+    infotext.innerText = dataObjectData.text
+     
+
     
+}
+function loadProjectsWithTag(id){
+    var buttonTag = id.innerText;
+
+    projList.innerHTML = ''
+    if (buttonTag == 'All'){
+
+        loadProjects()
+    }  
+    for (let proj in project_list) {
+        var projectData = project_list[proj];
+        if (projectData.tags == buttonTag){
+        console.log(projectData)
+        $(projList).append(
+            `
+        <div class="projectBox" data-id=${proj} id="proj" onclick="openProjectInfo(this)">
+        <div class="projectImg">
+        <div class="projctShadow">
+            <h3 class="projecTitle">
+                ${projectData.name}
+            </h3>
+            <span class="projectParalax" alt="${projectData.par}">
+                 ${projectData.par}
+            </span>
+            <div class="projectTags" alt="Project">
+                <span class="projectTag">    ${projectData.tags}</span>
+            </div>
+      
+        </div>
+            `
+        )
+    
+    }    
+
+    }
+
 }
