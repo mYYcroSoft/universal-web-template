@@ -58,6 +58,7 @@ projNav.addEventListener('click', function(e){
 
 
 var projectBoxStatus = false
+var projectLastId = 0
 var projBox = document.getElementById('projectInfoBox')
 function openProjectInfo(id){
 if(projectBoxStatus == false){
@@ -71,4 +72,5 @@ if(projectBoxStatus == false){
 
     const projData = id.getAttribute("data-id")
     console.log(project_list[projData]);
+    
 }

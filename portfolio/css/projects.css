@@ -136,7 +136,7 @@
 
         .projectInfoBox{
             position: fixed;
-            right: -100%;
+            right: 0%;
             width: 30%;
             height: 100%;
             z-index: 6;
@@ -144,6 +144,38 @@
             text-align: center;
             transition: 0.3s;
         }
+
+        .projectInfoBox h1 {
+            color: #00ffc8;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .projectInfoBox span {
+            color: #9b9b9b;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif ;
+            font-size: 1rem;
+            
+        }
+        .infoText{
+            text-align: left;
+            padding: 5rem;
+        }
+        .infoBoxImages{
+            position: relative;
+            overflow-y: scroll;
+
+            height: 60%;
+        }
+
+ 
+        .infoBoxImage{
+            position: relative;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+        
 
         @media screen and (max-width: 1600px) {
             

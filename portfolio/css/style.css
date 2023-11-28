@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mahajani&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mahajani&display=swap');
+*/
 :root{
 --background: rgb(34, 34, 46);
 --background-light: #39374F;
@@ -10,7 +10,7 @@
 
 body{
     background-color: rgb(34, 34, 46);
-    font-family: 'Noto Sans Mahajani', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: scale 0.5s ease;
 
 }
@@ -268,6 +268,7 @@ li{
   .welcome-text{
  
     font-size: 8vw;
+    color: #0bedbc;
 
   }
   .wcm_IM{
