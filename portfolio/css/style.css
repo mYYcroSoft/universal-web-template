@@ -79,6 +79,8 @@ li{
   color: #efefef;
 
   transition: 0.3s;
+  font-weight: 500;
+  font-size: 1vw auto;  
 
 }
 
@@ -91,13 +93,6 @@ li{
 
 .mainLang{
   background-color: #0bedbc4f;
-}
-.language_name{
-
-
-   
-  font-weight: 500;
-  font-size: 1vw;  
 }
 
 
@@ -166,7 +161,7 @@ li{
    /* border-width: 0.5px 0.5px 0px 0px;*/
     border-radius: 15px;
     margin-bottom: 100pt;
- transition: 0.5s;
+  transition: 0.5s;
  
 }
 .blog-container:hover{
@@ -175,6 +170,13 @@ li{
   opacity: 1;
  
   cursor: none;
+}
+
+.blog-container h2{
+    font-size: 2vw auto;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10pt;
 }
 .blog-data{
     color: #39374F; 

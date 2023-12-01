@@ -1,0 +1,29 @@
+
+.homeContainer{
+    position: fixed;
+    padding: 50pt;
+    width: 100%;
+    left: 10%;
+    top: 10%;
+    text-align: ce;
+}
+
+.welcome-text{
+    font-size: 2.5vw; 
+ }
+
+ .socialsContainer a{
+    position: relative;
+    top: 50pt;
+    color: #ffffff4e;
+    font-size: 20pt;
+    margin-left: 0pt;
+    transition: 0.3s;
+    margin-right: 20pt;
+  }
+  
+  .socialsContainer a:hover{
+    transition: 0.3s;
+    color: #ffffff;
+  }
+  
