@@ -1,49 +1,58 @@
 <?php
+include '../modules/db.php';
 
 class BlogListResult
 {
-    public function __construct()
+    public function __construct($conn)
     {
+        $this->conn = $conn;
         $this->BlogList = [];
         $this->getBlogs();
+    }
+
+    public function getBlogList()
+    {
+        return $this->BlogList;
     }
 
     protected function getBlogs()
     {
         $sql = 'SELECT * FROM blog';
-        $result = $conn->query($sql);
-        $this->BlogList = Blog($result['id']);
+        $result = $this->conn->query($sql);
+
         if ($result->num_rows > 0) {
-            return $result;
+            foreach ($result as $row) {
+                $this->BlogList[] = new Blog($row['id'], $this->conn);
+            }
             echo 'Blog loaded successfully';
         } else {
-            echo 'Error: '.$sql.'<br>'.$conn->error;
+            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
         }
     }
 }
 
 class Blog
 {
-    public function __construct($id)
+    public function __construct($id, $conn)
     {
-        $instanceLoadData = loadBlog($id);
-        $this->id = $instanceLoadData['id'];
+        $this->conn = $conn;
+        $this->id = $id;
+        $instanceLoadData = $this->loadBlog($this->id);
         $this->title = $instanceLoadData['title'];
         $this->content = $instanceLoadData['content'];
         $this->author = $instanceLoadData['author'];
-        $thi->date = $instanceLoadData['date'];
+        $this->date = $instanceLoadData['date'];
     }
 
     protected function loadBlog($id)
     {
-        $sql = "SELECT * FROM blog WHERE id = '$this->id'";
-        $result = $conn->query($sql);
+        $sql = "SELECT * FROM blog WHERE id = '$id'";
+        $result = $this->conn->query($sql);
 
         if ($result->num_rows > 0) {
-            return $result;
-            echo 'Blog loaded successfully';
+            return $result->fetch_assoc();
         } else {
-            echo 'Error: '.$sql.'<br>'.$conn->error;
+            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
         }
     }
 
@@ -81,12 +90,19 @@ class Blog
 
     public function updateDataSQL()
     {
-        $sql = "UPDATE blog SET title='$this->$title', content='$this->$content', author='$this->$author', date='$this->$date' WHERE id='$this->id'";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
+        $sql = "UPDATE blog SET title='$this->title', content='$this->content', author='$this->author', date='$this->date' WHERE id='$this->id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
             echo 'Blog updated successfully';
         } else {
-            echo 'Error: '.$sql.'<br>'.$conn->error;
+            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
         }
     }
 }
+
+$blogList = new BlogListResult($conn);
+$blogInstances = $blogList->getBlogList();
+
+echo '<pre>';
+print_r($blogInstances[0]->getData());
+echo '</pre>';
