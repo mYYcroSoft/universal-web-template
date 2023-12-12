@@ -104,5 +104,8 @@ $blogList = new BlogListResult($conn);
 $blogInstances = $blogList->getBlogList();
 
 echo '<pre>';
-print_r($blogInstances[0]->getData());
+foreach ($blogInstances as $blogInstance) {
+    print_r($blogInstance->getData());
+}
+
 echo '</pre>';
