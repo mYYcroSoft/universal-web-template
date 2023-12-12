@@ -1,5 +1,6 @@
 <?php
 
+echo 'DSD';
 error_log('DIR LOAD');
 include_once __DIR__.'/db.php';
 class newBlog
