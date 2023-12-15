@@ -1,5 +1,4 @@
 <?php
-include '../modules/db.php';
 
 class BlogListResult
 {
@@ -26,7 +25,7 @@ class BlogListResult
             }
             echo 'Blog loaded successfully';
         } else {
-            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
+            echo 'Error: '.$sql.'<br>'.$this->conn->error;
         }
     }
 }
@@ -52,7 +51,7 @@ class Blog
         if ($result->num_rows > 0) {
             return $result->fetch_assoc();
         } else {
-            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
+            echo 'Error: '.$sql.'<br>'.$this->conn->error;
         }
     }
 
@@ -70,6 +69,17 @@ class Blog
             'author' => $this->author,
             'date' => $this->date,
         ];
+    }
+
+    public function remove()
+    {
+        $sql = "DELETE FROM blog WHERE id='$this->id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            echo 'Blog removed successfully';
+        } else {
+            echo 'Error: '.$sql.'<br>'.$this->conn->error;
+        }
     }
 
     public function updateData($title, $content, $author, $date)
@@ -95,11 +105,12 @@ class Blog
         if ($result) {
             echo 'Blog updated successfully';
         } else {
-            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
+            echo 'Error: '.$sql.'<br>'.$this->conn->error;
         }
     }
 }
 
+/*
 $blogList = new BlogListResult($conn);
 $blogInstances = $blogList->getBlogList();
 
@@ -109,3 +120,4 @@ foreach ($blogInstances as $blogInstance) {
 }
 
 echo '</pre>';
+*/
