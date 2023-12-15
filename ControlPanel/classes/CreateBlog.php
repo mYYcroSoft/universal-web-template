@@ -3,7 +3,6 @@
 echo 'DSD';
 error_log('DIR LOAD');
 
-
 class newBlog
 {
     protected $id;
@@ -11,7 +10,7 @@ class newBlog
     protected $content;
     protected $author;
     protected $date;
-    protected $conn; 
+    protected $conn;
 
     public function __construct($id, $title, $content, $author, $date, $conn)
     {
@@ -43,12 +42,11 @@ class newBlog
         if ($result) {
             echo 'Blog created successfully';
         } else {
-            echo 'Error: ' . $sql . '<br>' . $this->conn->error;
+            echo 'Error: '.$sql.'<br>'.$this->conn->error;
         }
     }
 
     public function __destruct()
     {
-        // Perform any necessary cleanup here
     }
 }
