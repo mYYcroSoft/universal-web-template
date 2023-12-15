@@ -1,8 +1,8 @@
 <?php
 
 /* Musím opravit -> Nefunguje DIR */
-include_once '../../classes/CreateBlog.php';
-include_once '../../modules/db.php';
+include_once './classes/CreateBlog.php';
+include_once '../../db.php';
 
 if (isset($_POST['submit'])) {
     $id = random_int(100, 999);

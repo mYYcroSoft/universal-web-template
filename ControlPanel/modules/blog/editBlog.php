@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../db.php';
-include_once '../../classes/LoadBlog.php';
+include_once './classes/LoadBlog.php';
 
 if (isset($_POST['remove'])) {
     $id = $_POST['id'];
