@@ -1,0 +1,51 @@
+.navigationMenuContainer{
+    position: fixed;
+    height: auto;
+    width: 5rem;
+    padding: 10pt;
+    text-align: center;
+    background-color: #34333e2c;
+    margin: 15pt;
+    top: 10%;
+    border-radius: 15px;
+    color: #ffffff5e;
+    font-size: 180%;
+    vertical-align:middle;
+}
+
+.navigation_link{
+   margin-bottom: 80%;
+ 
+   transition: 0.5s;
+}
+
+.navigation_link:hover{
+    transition: 100ms;
+    color: #00ffc8;
+
+    text-shadow: #00ffc8 0px 0px 15px;
+    cursor: pointer;
+}
+
+
+
+.navigation_link_selected{
+    color: #00ffc8;
+    animation: selectedLink 2s infinite;
+    transform: rotateY(0deg);
+}
+
+@keyframes selectedLink{
+    0%{
+        color: #00ffc8;
+        text-shadow: #00ffc8 0px 0px 50px;
+        transform: rotateY(0deg);
+    }
+    100%{
+        color: #00ffc818;
+        text-shadow: #00ffc818 0px 0px 5px;
+        transform: rotateY(180deg);
+    }
+}
+
+
