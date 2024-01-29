@@ -1,0 +1,359 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+:root {
+    --blue_l1: #635985;
+    --blue_l2: #443C68;
+    --blue_d1: #393053;
+    --blue_d2: #18122B;
+}
+
+body{
+    background-color: var(--blue_l2);
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+#home{
+    height: 100vh;
+    
+
+   
+}
+
+
+.home_text_container{
+ 
+    position: absolute;
+    text-align: left;
+    width: 40%;
+    color: #fff;
+    font-family: Arial;
+    top: 15%;
+    left: 5%;
+    padding: 50px;
+}
+
+.big_text{
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  font-weight: 800;
+}
+.big_text_under{
+    position: relative;
+    font-size: 20px;
+    background-color: var(--blue_l1);
+    padding: 5px;
+    top: -7px;
+    border-radius: 6px;
+}
+
+.about_text{
+    font-size: 18px;
+
+}
+
+.home_image{
+    position: absolute;
+left: 60%;
+top: 5%;
+}
+
+.programming_langs{
+background-color: #fff;
+color: #3a3a3a;
+padding: 25px;  
+font-family: Arial;
+font-size: 15px;
+font-weight: 500;
+margin-top: 25px;
+line-height: 26pt;
+
+}
+
+.lang{
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--blue_l1);
+    color: #fff;
+    padding: 1px;
+ 
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 6px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.nav_container{
+    position: fixed;
+    background-color: #fff;
+    border: solid 5px var(--blue_l1);
+    box-shadow: var(--blue_l1) 1px 1px 5px;
+    width: 50%;
+    left: 25%;
+    padding: 10px;
+    border-radius: 15px;
+    top: 90%;
+    z-index: 5;
+    height: 35px;
+   
+}
+.nav_item{
+    position: relative;
+    font-family: Arial;
+    font-weight: 700;
+    color:  #ffffff;
+    font-size: 15px;
+    top: 5px;
+    margin-left: 100px;
+ 
+    background-color: #635985;
+    padding: 3px;
+    border-radius: 5px
+    ;
+  
+}
+
+.nav_item_icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #635985;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 20px;
+ 
+}
+
+
+.progress-container {
+ 
+    margin-top: -6px;
+    width: 80%;
+    height: 5px;
+    background: var(--blue_l2);
+  }
+  
+  .progress-bar {
+    height: 1px;
+    background: #24f481;
+    border: solid #24f481 2px;
+    box-shadow: #24f481 2px 2px 25px;
+    width: 0%;
+    transition: 0.5;
+  }
+
+/* width */
+::-webkit-scrollbar {
+width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
+
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+  }
+  .serivce_container::-webkit-scrollbar{
+    position: absolute;
+   left: 50px;
+   direction:ltr;
+  }
+
+.serivce_container{
+    
+    position: absolute;
+    background-color:#fff;
+    display: inline-block;
+    left: 5%;
+    top: 5%;
+    width: 30%;
+    height:  70%;
+    max-height: 56rem;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: auto;
+    
+}
+
+.ser-big-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+   
+    color: var(--blue_l1);
+}
+
+
+
+.slide-out{
+    animation: animation1 1s ease 0s infinite normal none;
+}
+
+@keyframes animation1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
+    
+  }
+
+/*service*/
+
+.service-box{
+    width:  85%;
+    border: solid 5px var(--blue_l1);
+    background-color: var(--blue_d1);
+    
+    border-radius: 6px;
+    height: 10vh;
+    padding: 20px;
+    transition: 0.5s;
+}
+.service-box:hover{
+    transition: 0.5s;
+    border: solid #50486b;
+    border-width: 5px 30px 5px 5px;
+}
+.serivce-icon{
+    position: absolute;
+    font-size: 50px;
+    color: #ffffff;
+    padding: 0px;
+}
+
+.service-text-box{
+    position: relative;
+    left: 13%;
+    top: 8%;
+
+    }
+
+    .service-title{
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .service-text{
+        font-family: Arial;
+        color: #fff;
+        font-size: 17px;
+    }
+
+    .service-section{
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        color: #a5a5a5;
+  
+    }
+
+    .service-price{
+        position: absolute;
+        background-color: #635985;
+        color: #fff;
+        padding: 5px;
+        font-family: Arial;
+        font-weight: 500;
+        border-radius: 6px;
+        left: 63%;
+        top: -15px;
+    }
+
+
+    /*PROJECT*/
+#project-sec{
+    position: absolute;
+
+    display: inline-block;
+    width: 30%;
+    height:  70%;
+    top: 5%;
+    left: 5%;
+    border-radius: 15px;
+    max-height: 56rem;
+    padding: 50px;
+    background-color: #fff;
+    overflow: auto;
+}
+    .project-title{
+        font-family: 'Oswald', sans-serif;
+        font-size: 45px;
+        color: #fff;
+        font-weight: 500;
+    }
+
+.project_box{
+    width: 80%;
+    height: 8rem;
+
+    background-color: #fff;
+    color: var(--blue_l1);
+    border-radius: 6px;
+    border: solid 5px var(--blue_l1);
+    padding: 10px;
+} 
+.project_box_title{
+    font-family: 'Oswald', sans-serif;
+    color: var(--blue_l1);
+    font-size: 25px;
+    font-weight: 800;
+}
+.project_box_text{
+    font-family: Arial;
+    color: var(--blue_l1);
+    font-size: 15px;
+    top: 10px;
+}
+
+
+.project-badges{
+    position: relative;
+    top: 20%;
+}
+.project-badge{
+    font-family: Arial;
+    font-weight: 500;
+    background-color: var(--blue_l1);
+    padding: 6px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 15px;
+    
+}
+
+.project-gallery-button{
+    position: relative;
+    left: 90%;
+    font-family: Arial;
+    background-color: var(--blue_l1);
+    box-shadow: #635985 2px 2px 5px;
+    color: #fff;
+
+    text-align: center;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 6px;
+
+}
